@@ -1,3 +1,7 @@
+
+
+@import "tailwindcss";
+
 /* ─── Font ─── */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
@@ -12,8 +16,8 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #f1f5f9;          /* light gray */
-  color: #1e293b;               /* slate‑800 */
+  background: #0f172a;         /* slate-900 */
+  color: #f1f5f9;              /* slate-100 */
   line-height: 1.6;
 }
 
@@ -24,16 +28,17 @@ h2 {
   font-size: 2.2rem;
   font-weight: 600;
   letter-spacing: 0.4px;
+  color: #e2e8f0;              /* slate-200 */
 }
 
 /* ─── Card ─── */
 .card {
-  max-width: 340px;             /* <<< controls card width */
-  margin: 1.25rem auto;         /* centers on page if no grid */
+  max-width: 340px;
+  margin: 1.25rem auto;
   border-radius: 14px;
-  background: #fff;
+  background: #1e293b;         /* slate-800 */
   overflow: hidden;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   transition: transform 0.25s, box-shadow 0.25s;
@@ -41,7 +46,7 @@ h2 {
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 24px rgba(255, 255, 255, 0.06);
 }
 
 /* ─── Image ─── */
@@ -67,7 +72,7 @@ h2 {
 }
 
 .tour-price {
-  color: #e11d48;               /* rose‑600 */
+  color: #f43f5e;              /* rose-500 */
   font-weight: 600;
   font-size: 1.05rem;
 }
@@ -75,17 +80,18 @@ h2 {
 .tour-name {
   font-weight: 600;
   font-size: 1.1rem;
+  color: #f8fafc;              /* slate-50 */
 }
 
 /* ─── Description & “read more” ─── */
 .description {
   font-size: 0.95rem;
-  color: #475569;               /* slate‑600 */
+  color: #94a3b8;              /* slate-400 */
   margin-bottom: 1.1rem;
 }
 
 .read-more {
-  color: #2563eb;               /* blue‑600 */
+  color: #60a5fa;              /* blue-400 */
   cursor: pointer;
   margin-left: 0.3rem;
   font-weight: 500;
@@ -93,32 +99,28 @@ h2 {
 }
 
 .read-more:hover {
-  color: #1e40af;               /* blue‑800 */
+  color: #3b82f6;              /* blue-500 */
 }
 
 /* ─── Button ─── */
 .btn-red {
-  background: #e11d48;          /* rose‑600 */
+  background: #e11d48;         /* rose-600 */
   color: #fff;
   border: none;
   border-radius: 8px;
   padding: 0.55rem 1.6rem;
   font-size: 0.95rem;
   cursor: pointer;
-  margin: 0 0 1.4rem;           /* bottom spacing */
+  margin: 0 0 1.4rem;
   align-self: center;
   transition: background 0.25s;
 }
 
 .btn-red:hover {
-  background: #be123c;          /* darker rose‑700 */
+  background: #be123c;         /* rose-700 */
 }
 
-/* ─── Grid helper (optional) ───
-   If you place all <Card> components inside
-   <div className="tours-grid"> … </div>
-   you’ll get a responsive multi‑column layout.
-   Otherwise, cards simply stack and center. */
+/* ─── Grid ─── */
 .tours-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -127,7 +129,8 @@ h2 {
   margin: auto;
   padding-bottom: 4rem;
 }
-/* ─── Empty State Container ─── */
+
+/* ─── Empty State ─── */
 .refres {
   text-align: center;
   margin-top: 4rem;
@@ -135,15 +138,15 @@ h2 {
 
 .refres h2 {
   font-size: 1.6rem;
-  color: #334155; /* slate-700 */
+  color: #cbd5e1;              /* slate-300 */
   margin-bottom: 1.5rem;
 }
 
 /* ─── Refresh Button ─── */
 .btn-white {
-  background-color: #fff;
-  color: #1d4ed8; /* blue-700 */
-  border: 2px solid #1d4ed8;
+  background-color: transparent;
+  color: #3b82f6;              /* blue-500 */
+  border: 2px solid #3b82f6;
   padding: 0.5rem 1.5rem;
   border-radius: 8px;
   font-size: 0.95rem;
@@ -153,6 +156,6 @@ h2 {
 }
 
 .btn-white:hover {
-  background-color: #1d4ed8;
+  background-color: #3b82f6;
   color: #fff;
 }
