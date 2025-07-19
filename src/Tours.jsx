@@ -7,9 +7,6 @@ export default function Tours({tours,removeTour}) {
     
   return (
     <div className='container'>
-        <div>
-            <h2 className='title'>Plan With Joy</h2>
-        </div>
         <div className='tours-grid'>
            {
             tours.map((tour)=>{

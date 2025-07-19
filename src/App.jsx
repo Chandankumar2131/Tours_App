@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import data from "./Data"
 import Tours from "./Tours";
+import Header from "./Header";
 // import  "./App.css";
 
 
@@ -22,6 +23,13 @@ export default function App() {
       }
   return (
     <div className="App">
+     <div className="sticky-header">
+  <div className="header-container">
+    <Header />
+  </div>
+</div>
+
+       
       <Tours tours={tours} removeTour={removeTour}></Tours>
     </div>
   )
